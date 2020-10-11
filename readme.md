@@ -23,15 +23,15 @@ the `nowidget` extension adds some new traits to `IPython`'s interactive shell:
 ```
 
 
-1. `#shell.display_manager` manages updating `IPython` display objects when shell events occur.
-2. `#shell.test` provides formal interactive testing using `unittest and doctest`
+1. `shell.display_manager` manages updating `IPython` display objects when shell events occur.
+2. `shell.test` provides formal interactive testing using `unittest and doctest`
 
     automatic is a default feature of `nowidget`. `doctest and unittest` objects are automatically executed with each cell execution.
 
         shell = __import__("IPython").get_ipython()
         if shell:
 
-3. `#shell.trace` uses `monkeytype` to generate type stubs from the interactive computing experience.
+3. `shell.trace` uses `monkeytype` to generate type stubs from the interactive computing experience.
 
     turn tracing on and off with
 
