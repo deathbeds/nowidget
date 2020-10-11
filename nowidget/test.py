@@ -67,7 +67,14 @@ def show(object: unittest.TestResult) -> str:
         if object.failures:
             body += '\n'.join(msg for text,
                               msg in object.failures)
+    body = clean_doctest(body)
     return body if body else None
+
+
+def clean_doctest(object):
+    # remove some ugly ass doctest business
+    a, _, b = object.partition("-"*70)
+    return b or a
 
 
 def run(suite: unittest.TestSuite) -> str:
@@ -176,10 +183,9 @@ class TestExtension(nowidget.base.Trait):
             object = self.parent.user_ns.get(name, None)
             if name.startswith(self.pattern) or nowidget.util.istype(object, unittest.TestCase):
                 tests.append(object)
-        if tests:
-            test = Test("__main__", *tests,
-                        alias=F"In[{result.execution_count}]", vars=["__test__"])
-            test.display()
+        test = Test("__main__", result.info.raw_cell, *tests,
+                    alias=F"In[{result.execution_count}]", vars=["__test__"])
+        test.display()
 
 
 def load_ipython_extension(shell):
