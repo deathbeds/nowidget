@@ -11,7 +11,7 @@ classifiers = ["License :: OSI Approved :: MIT License"]
 requires=["jinja2", "monkeytype"]
 
 [tool.flit.metadata.requires-extra]
-test = ["pytest", "nbval"]
+test = ["pytest", "nbval", "pandas"]
 doc = ["jupyter-book", "pyppeteer",  "doit"]
 
 
