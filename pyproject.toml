@@ -12,7 +12,7 @@ requires=["jinja2", "monkeytype"]
 
 [tool.flit.metadata.requires-extra]
 test = ["pytest", "nbval", "pandas"]
-doc = ["jupyter-book", "pyppeteer",  "doit"]
+doc = ["jupyter-book", "pyppeteer",  "doit", "hypothesis"]
 
 
 [tool.pytest.ini_options]
