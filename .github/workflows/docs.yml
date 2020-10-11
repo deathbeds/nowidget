@@ -29,6 +29,8 @@ jobs:
         pip install .[doc]
     - name: Build docs
       run: |
+        doit list
+        doit book -h
         doit -n 2 pdf book
     - uses: actions/upload-artifact@v2
       with:
