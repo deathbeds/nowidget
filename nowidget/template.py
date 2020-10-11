@@ -35,9 +35,10 @@ class Template(nowidget.Display):
 
     def __init__(self, body: str, **kwargs):
         super().__init__(body=body, **kwargs)
-        if not self.parent.has_trait('display_manager'):
-            nowidget.manager.load_ipython_extension(self.parent)
-        self.parent.display_manager.append(self)
+        if self.parent:
+            if not self.parent.has_trait('display_manager'):
+                nowidget.manager.load_ipython_extension(self.parent)
+            self.parent.display_manager.append(self)
 
     @traitlets.default('template')
     def _default_template(self):

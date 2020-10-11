@@ -183,13 +183,12 @@ class TestExtension(nowidget.base.Trait):
 
 
 def load_ipython_extension(shell):
-    if not shell.has_trait('test_extension'):
-        shell.add_traits(test_extension=traitlets.Instance(
+    if not shell.has_trait('test'):
+        shell.add_traits(test=traitlets.Instance(
             TestExtension, kw=dict(parent=shell)
         ))
-        shell.test_extension.register()
+        shell.test.register()
 
 
 def unload_ipython_extension(shell):
-    shell.test_extension.unregister()
-    ...
+    shell.test.unregister()

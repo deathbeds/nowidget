@@ -17,14 +17,16 @@ class Trait(traitlets.HasTraits):
     enabled = traitlets.Bool(True)
 
     def register(self):
-        for key in REGISTER_KEYS:
-            if hasattr(self, key):
-                self.parent.events.register(key, getattr(self, key))
+        if self.parent:
+            for key in REGISTER_KEYS:
+                if hasattr(self, key):
+                    self.parent.events.register(key, getattr(self, key))
 
     def unregister(self):
-        for key in REGISTER_KEYS:
-            if hasattr(self, key):
-                self.parent.events.unregister(key, getattr(self, key))
+        if self.parent:
+            for key in REGISTER_KEYS:
+                if hasattr(self, key):
+                    self.parent.events.unregister(key, getattr(self, key))
 
     def toggle(self, object: bool):
         self.enabled = bool(
@@ -43,12 +45,14 @@ class Display(Trait):
         self.register()
 
     def register(self):
-        self.enabled and self.parent.display_manager.append(self)
+        if self.parent:
+            self.enabled and self.parent.display_manager.append(self)
         super().register()
 
     def unregister(self):
         super().unregister()
-        self.pop(self)
+        if self.parent:
+            self.parent.display_manager.pop(self)
 
     def update(self, **kwargs):
         if not self.enabled:
