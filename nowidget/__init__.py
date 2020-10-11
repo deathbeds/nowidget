@@ -10,6 +10,7 @@ from .template import *
 
 
 def load_ipython_extension(shell):
+    shell.user_ns["shell"] = shell
     base.load_ipython_extension(shell)
 
 
