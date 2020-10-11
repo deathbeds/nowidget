@@ -1,0 +1,4 @@
+- file: readme.md
+- part: nowidget
+  chapters:
+  - file: nowidget/readme.md
