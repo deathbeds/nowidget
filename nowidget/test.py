@@ -148,7 +148,9 @@ class Test(nowidget.base.Display):
         return self.test_result
 
     def main(self, **kwargs):
-        return IPython.display.Markdown(F"""```pytb\n{show(self.test()) or ""}```""")
+        result = self.test()
+        if result.testsRun:
+            return IPython.display.Markdown(F"""```pytb\n{show(result) or ""}```""")
 
     def description(self, object):
         self.alias = object
