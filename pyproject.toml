@@ -8,7 +8,7 @@ author = "tonyfast"
 author-email = "tony.fast@gmail.com"
 home-page = "http://github.com/deathbeds/nowidget"
 classifiers = ["License :: OSI Approved :: MIT License"]
-requires=["jinja2", "monkeytype"]
+requires=["monkeytype", "nbconvert"]
 
 [tool.flit.metadata.requires-extra]
 test = ["pytest", "nbval", "pandas"]
