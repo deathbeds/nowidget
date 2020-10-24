@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nowidget</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+    
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="nowidget">
+<h1><code class="docutils literal notranslate"><span class="pre">nowidget</span></code><a class="headerlink" href="#nowidget" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">nowidget</span></code> is a pure-python suite of interactive widgets based off of <code class="docutils literal notranslate"><span class="pre">traitlets</span></code> that do not explicitly require an javascript extensions.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    import nowidget
+</pre></div>
+</div>
+<p>probably the most useful <code class="docutils literal notranslate"><span class="pre">nowidget</span></code> object is <code class="docutils literal notranslate"><span class="pre">nowidget.Template</span></code>, it is  <code class="docutils literal notranslate"><span class="pre">jinja2</span></code> display objects using <code class="docutils literal notranslate"><span class="pre">IPython</span></code>’s rich display. <code class="docutils literal notranslate"><span class="pre">nowidget.Template</span></code> is interactive and updates on cell exection or widget events. for example, in a notebook, the <code class="docutils literal notranslate"><span class="pre">nowidget.Template</span></code> will automatically discover the value of <code class="docutils literal notranslate"><span class="pre">cookies</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    cookies = 3
+    nowidget.Template(&quot;When you eat {{cookies}} cookies, you consume {{cookies*50}} calories.&quot;)
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">nowidget.Template</span></code> will update when a cell is run. in the example above, if <code class="docutils literal notranslate"><span class="pre">cookie</span></code> were changed in a later cell then template will update. updating can be disabled with the <code class="docutils literal notranslate"><span class="pre">enabled</span></code> flag.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    nowidget.Template(&quot;When you eat {{cookies}} cookies, you consume {{cookies*50}} calories.&quot;,
+                      enabled=True
+    )
+</pre></div>
+</div>
+<p>the <code class="docutils literal notranslate"><span class="pre">nowidget</span></code> extension adds some new traits to <code class="docutils literal notranslate"><span class="pre">IPython</span></code>’s interactive shell:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> nowidget
+</pre></div>
+</div>
+<ol>
+<li><p><code class="docutils literal notranslate"><span class="pre">shell.test</span></code> is a primary default feature of the <code class="docutils literal notranslate"><span class="pre">nowidget</span></code> extension.</p>
+<p>it provides formal <code class="docutils literal notranslate"><span class="pre">doctest</span> <span class="pre">and</span> <span class="pre">unittest</span></code>sto be executed with each cell execution. as an example.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> def test_me():
+</pre></div>
+</div>
+<p>function being with <code class="docutils literal notranslate"><span class="pre">&quot;test_*&quot;</span></code> are executed as tests.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> shell = __import__(&quot;IPython&quot;).get_ipython()
+ if shell:
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shell.display_manager</span></code> manages updating <code class="docutils literal notranslate"><span class="pre">IPython</span></code> display objects when shell events occur.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shell.trace</span></code> uses <code class="docutils literal notranslate"><span class="pre">monkeytype</span></code> to generate type stubs from the interactive computing experience.</p>
+<p>turn tracing on and off with</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     shell.trace.on()
+     shell.trace.off()
+</pre></div>
+</div>
+<p>or as a context manager</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     with shell.trace:
+         ...
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="section" id="developer-tasks">
+<h2>developer tasks<a class="headerlink" href="#developer-tasks" title="Permalink to this headline">¶</a></h2>
+<p>a suite of tasks based off of <code class="docutils literal notranslate"><span class="pre">doit</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    def task_book():
+</pre></div>
+</div>
+<p>build the docs using jupyter book.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        return dict(actions=[&quot;jb build .&quot;], file_dep=[&#39;_toc.yml&#39;], targets=[&#39;_build/html&#39;])
+
+    def task_pdf():
+</pre></div>
+</div>
+<p>export a pdf version of the docs.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        return dict(actions=[&quot;jb build . --builder pdfhtml&quot;], file_dep=[&#39;_toc.yml&#39;], targets=[&#39;_build/pdf/book.pdf&#39;])
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-nowidget/readme"></span><div class="section" id="nowidget-cli">
+<h3><code class="docutils literal notranslate"><span class="pre">nowidget</span></code> cli<a class="headerlink" href="#nowidget-cli" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By deathbeds<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
