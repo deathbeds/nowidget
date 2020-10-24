@@ -32,7 +32,7 @@ jobs:
       run: |
 
         doit list
-        doit book -h
+        doit book
         doit -n 2 pdf book
     - uses: actions/upload-artifact@v2
       with:
