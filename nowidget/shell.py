@@ -1,6 +1,7 @@
 import nowidget
 
 import traitlets
+from . import kernel
 
 
 class Weave(nowidget.Trait):
@@ -19,6 +20,7 @@ def load_ipython_extension(shell):
         shell.weave.register()
     tingle.extension.load_ipython_extension(shell)
     nowidget.load_ipython_extension(shell)
+    kernel.load_ipython_extension(shell)
 
 
 def unload_ipython_extension(shell):
@@ -32,3 +34,4 @@ def unload_ipython_extension(shell):
     nowidget.unload_ipython_extension(shell)
     import tingle
     tingle.extension.unload_ipython_extension(shell)
+    kernel.unload_ipython_extension(shell)
