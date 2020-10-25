@@ -1,5 +1,5 @@
 """interactive traitlets based widgets."""
-__version__ = "0.1.0"
+__version__ = __import__("datetime").date.today().strftime("%Y.%m.%d")
 
 
 from . import util, base, kernel
