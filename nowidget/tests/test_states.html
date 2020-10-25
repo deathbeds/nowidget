@@ -234,7 +234,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting pytest_state.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing pytest_state.py
 </pre></div>
 </div>
 </div>
@@ -280,7 +280,13 @@ collected 1 item
 &lt;Module pytest_state.py&gt;
   &lt;Function test_&gt;
 
-============================ no tests ran in 0.07s =============================
+=============================== warnings summary ===============================
+../../../../miniconda3/lib/python3.7/site-packages/ipykernel/iostream.py:14
+  /home/tonyfast/miniconda3/lib/python3.7/site-packages/ipykernel/iostream.py:14: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses
+    from imp import lock_held as import_lock_held
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+============================== 1 warning in 0.14s ==============================
 </pre></div>
 </div>
 </div>
@@ -289,13 +295,8 @@ collected 1 item
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">it</span> <span class="o">=</span> <span class="o">!</span>ipython -m pytest -- --collect-only -cpytest_state.py -spno:warnings pytest_state.py
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="mi">4</span><span class="p">:]))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="mi">4</span><span class="p">:]))</span>
 </pre></div>
 </div>
 </div>
@@ -306,7 +307,13 @@ collected 1 item
 &lt;Module pytest_state.py&gt;
   &lt;Function test_&gt;
 
-============================ no tests ran in 0.13s =============================
+=============================== warnings summary ===============================
+../../../../miniconda3/lib/python3.7/site-packages/ipykernel/iostream.py:14
+  /home/tonyfast/miniconda3/lib/python3.7/site-packages/ipykernel/iostream.py:14: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses
+    from imp import lock_held as import_lock_held
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+============================== 1 warning in 0.13s ==============================
 </pre></div>
 </div>
 </div>
