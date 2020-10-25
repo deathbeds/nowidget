@@ -25,9 +25,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: setup
       run: |
-        sudo apt install pandoc      
         pip install .[doc]
         pip install -rrequirements.txt
+        sudo apt install pandoc
     - name: Build docs
       run: |
 
