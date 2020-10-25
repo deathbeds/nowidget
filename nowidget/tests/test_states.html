@@ -234,7 +234,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing pytest_state.py
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting pytest_state.py
 </pre></div>
 </div>
 </div>
@@ -268,22 +268,19 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="o">!</span>pytest --collect-only -cpytest_state.py -spno:warnings pytest_state.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">pt</span> <span class="o">=</span> <span class="o">!</span>pytest --collect-only -cpytest_state.py -spno:warnings pytest_state.py
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pt</span><span class="p">[</span><span class="mi">4</span><span class="p">:]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
-platform linux -- Python 3.7.7, pytest-6.1.1, py-1.9.0, pluggy-0.13.1
-rootdir: /home/tonyfast/Documents/nowidget/nowidget/tests, configfile: pytest_state.py
-plugins: github-actions-annotate-failures-0.1.0, tingle-0.1.0, xonsh-0.9.22, nbval-0.9.6, cov-2.10.1, hypothesis-5.19.3, importnb-0.6.2, pidgy-2020.9.9
-<span class=" -Color -Color-Bold">collecting ... </span>False False True
-collected 1 item                                                               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False False True
+collected 1 item
 
 &lt;Module pytest_state.py&gt;
   &lt;Function test_&gt;
 
-<span class=" -Color -Color-Green">============================ </span><span class=" -Color -Color-Yellow">no tests ran</span><span class=" -Color -Color-Green"> in 0.05s =============================</span>
+============================ no tests ran in 0.07s =============================
 </pre></div>
 </div>
 </div>
@@ -291,22 +288,25 @@ collected 1 item
 <p>running pytest inside ipython.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="o">!</span>ipython -m pytest -- --collect-only -cpytest_state.py -spno:warnings pytest_state.py
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">it</span> <span class="o">=</span> <span class="o">!</span>ipython -m pytest -- --collect-only -cpytest_state.py -spno:warnings pytest_state.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="mi">4</span><span class="p">:]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[22;0t]0;IPython: nowidget/tests[1m============================= test session starts ==============================[0m
-platform linux -- Python 3.7.7, pytest-6.1.1, py-1.9.0, pluggy-0.13.1
-rootdir: /home/tonyfast/Documents/nowidget/nowidget/tests, configfile: pytest_state.py
-plugins: github-actions-annotate-failures-0.1.0, tingle-0.1.0, xonsh-0.9.22, nbval-0.9.6, cov-2.10.1, hypothesis-5.19.3, importnb-0.6.2, pidgy-2020.9.9
-[1mcollecting ... [0mTrue False True
-collected 1 item                                                               [0m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True False True
+collected 1 item
 
 &lt;Module pytest_state.py&gt;
   &lt;Function test_&gt;
 
-[32m============================ [33mno tests ran[0m[32m in 0.11s[0m[32m =============================[0m
+============================ no tests ran in 0.13s =============================
 </pre></div>
 </div>
 </div>
